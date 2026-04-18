@@ -63,18 +63,17 @@ The model is based on the Vision Transformer (ViT) architecture using transfer l
 ---
 
 ## dc_vit.ipynb
-The model is based on the Vision Transformer (ViT) architecture using transfer learning with hyperparameter tuning and fine-tuning.
+The model is based on the Vision Transformer (ViT) architecture using transfer learning with two-phase training.
 
-**Test Accuracy:** 82.36%  
-**Macro Avg F1-score:** ~0.82  
+**Test Accuracy:** 58.51%  
+**Macro Avg F1-score:** ~0.58  
 
 ### Key Points
-- Used pretrained ViT backbone with CLS token classification  
-- Two-phase training (feature extraction + fine-tuning)  
-- Best configuration: lr = 5e-5, dropout = 0.2, backbone trainable  
-- Achieved highest validation accuracy: 87.48%  
-- Significant improvement after hyperparameter tuning  
-- Strong performance across all classes (especially Odia, Punjabi, Gujarati)  
+- Used pretrained ViT backbone (frozen in Phase 1)  
+- Fine-tuned last layers in Phase 2  
+- Applied basic data augmentation  
+- Moderate performance due to limited tuning  
+- Performance improved over baseline but lower than optimized ViT  
 
 ---
 
